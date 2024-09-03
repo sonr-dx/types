@@ -1,0 +1,82 @@
+{
+  "$id": "did.v1.ValidatorInfo.FeeInfo.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "FeeInfo defines a fee info",
+  "patternProperties": {
+    "^(baseDenom)$": {
+      "type": "string"
+    },
+    "^(feeRates)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "^(gasMultiply)$": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "enum": [
+            "NaN",
+            "Infinity",
+            "-Infinity"
+          ],
+          "type": "string"
+        }
+      ]
+    },
+    "^(initGasLimit)$": {
+      "exclusiveMaximum": 2147483648,
+      "minimum": -2147483648,
+      "type": "integer"
+    },
+    "^(isSimulable)$": {
+      "type": "boolean"
+    }
+  },
+  "properties": {
+    "base_denom": {
+      "type": "string"
+    },
+    "fee_rates": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "gas_multiply": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "enum": [
+            "NaN",
+            "Infinity",
+            "-Infinity"
+          ],
+          "type": "string"
+        }
+      ]
+    },
+    "init_gas_limit": {
+      "exclusiveMaximum": 2147483648,
+      "minimum": -2147483648,
+      "type": "integer"
+    },
+    "is_simulable": {
+      "type": "boolean"
+    }
+  },
+  "title": "Fee Info",
+  "type": "object"
+}

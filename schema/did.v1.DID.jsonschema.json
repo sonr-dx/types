@@ -1,0 +1,49 @@
+{
+  "$id": "did.v1.DID.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "DID defines a parsed DID string",
+  "properties": {
+    "identifier": {
+      "type": "string"
+    },
+    "method": {
+      "anyOf": [
+        {
+          "enum": [
+            "DID_NAMESPACE_UNSPECIFIED",
+            "DID_NAMESPACE_IPFS",
+            "DID_NAMESPACE_SONR",
+            "DID_NAMESPACE_BITCOIN",
+            "DID_NAMESPACE_ETHEREUM",
+            "DID_NAMESPACE_IBC",
+            "DID_NAMESPACE_WEBAUTHN",
+            "DID_NAMESPACE_DWN",
+            "DID_NAMESPACE_SERVICE"
+          ],
+          "title": "DID Namespace",
+          "type": "string"
+        },
+        {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        }
+      ]
+    },
+    "network": {
+      "type": "string"
+    },
+    "paths": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "subject": {
+      "type": "string"
+    }
+  },
+  "title": "DID",
+  "type": "object"
+}

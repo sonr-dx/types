@@ -1,0 +1,19 @@
+{
+  "$id": "did.v1.QueryTokenResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "QueryTokenResponse is the response type for the Query/LoginOptions RPC method.",
+  "properties": {
+    "error": {
+      "type": "string"
+    },
+    "success": {
+      "type": "boolean"
+    },
+    "token": {
+      "$ref": "did.v1.Token.jsonschema.json"
+    }
+  },
+  "title": "Query Token Response",
+  "type": "object"
+}

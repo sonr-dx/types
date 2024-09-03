@@ -1,0 +1,16 @@
+{
+  "$id": "did.v1.MsgProveWitnessResponse.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "MsgProveWitnessResponse is the response type for the ProveWitness RPC.",
+  "properties": {
+    "property": {
+      "type": "string"
+    },
+    "success": {
+      "type": "boolean"
+    }
+  },
+  "title": "Msg Prove Witness Response",
+  "type": "object"
+}

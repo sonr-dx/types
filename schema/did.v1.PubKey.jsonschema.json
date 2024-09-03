@@ -1,0 +1,92 @@
+{
+  "$id": "did.v1.PubKey.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "PubKey defines a public key for a did",
+  "properties": {
+    "algorithm": {
+      "anyOf": [
+        {
+          "enum": [
+            "KEY_ALGORITHM_UNSPECIFIED",
+            "KEY_ALGORITHM_ES256",
+            "KEY_ALGORITHM_ES384",
+            "KEY_ALGORITHM_ES512",
+            "KEY_ALGORITHM_EDDSA",
+            "KEY_ALGORITHM_ES256K",
+            "KEY_ALGORITHM_BLS12377",
+            "KEY_ALGORITHM_KECCAK256"
+          ],
+          "title": "Key Algorithm",
+          "type": "string"
+        },
+        {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        }
+      ]
+    },
+    "encoding": {
+      "anyOf": [
+        {
+          "enum": [
+            "KEY_ENCODING_UNSPECIFIED",
+            "KEY_ENCODING_RAW",
+            "KEY_ENCODING_HEX",
+            "KEY_ENCODING_MULTIBASE",
+            "KEY_ENCODING_JWK"
+          ],
+          "title": "Key Encoding",
+          "type": "string"
+        },
+        {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        }
+      ]
+    },
+    "hex": {
+      "type": "string"
+    },
+    "jwk": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "propertyNames": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "multibase": {
+      "type": "string"
+    },
+    "raw": {
+      "pattern": "^[A-Za-z0-9+/]*={0,2}$",
+      "type": "string"
+    },
+    "role": {
+      "anyOf": [
+        {
+          "enum": [
+            "KEY_ROLE_UNSPECIFIED",
+            "KEY_ROLE_AUTHENTICATION",
+            "KEY_ROLE_ASSERTION",
+            "KEY_ROLE_DELEGATION",
+            "KEY_ROLE_INVOCATION"
+          ],
+          "title": "Key Role",
+          "type": "string"
+        },
+        {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        }
+      ]
+    }
+  },
+  "title": "Pub Key",
+  "type": "object"
+}

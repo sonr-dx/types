@@ -1,0 +1,14 @@
+{
+  "$id": "did.v1.GenesisState.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "GenesisState defines the module genesis state",
+  "properties": {
+    "params": {
+      "$ref": "did.v1.Params.schema.json",
+      "description": "Params defines all the parameters of the module."
+    }
+  },
+  "title": "Genesis State",
+  "type": "object"
+}

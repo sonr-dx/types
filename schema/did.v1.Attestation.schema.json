@@ -1,0 +1,40 @@
+{
+  "$id": "did.v1.Attestation.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Attestation represents linked identifiers (e.g., Crypto Accounts, Github, Email, Phone)",
+  "patternProperties": {
+    "^(publicKey)$": {
+      "$ref": "did.v1.PubKey.schema.json",
+      "description": "The value of the linked identifier"
+    }
+  },
+  "properties": {
+    "controller": {
+      "description": "The type of the linked identifier (e.g., \"crypto\", \"github\", \"email\", \"phone\")",
+      "type": "string"
+    },
+    "id": {
+      "description": "The unique identifier of the attestation",
+      "type": "string"
+    },
+    "metadata": {
+      "$ref": "did.v1.Metadata.schema.json",
+      "description": "The controller of the attestation"
+    },
+    "origin": {
+      "description": "The origin of the attestation",
+      "type": "string"
+    },
+    "public_key": {
+      "$ref": "did.v1.PubKey.schema.json",
+      "description": "The value of the linked identifier"
+    },
+    "subject": {
+      "description": "The subject of the attestation",
+      "type": "string"
+    }
+  },
+  "title": "Attestation",
+  "type": "object"
+}

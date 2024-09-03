@@ -1,0 +1,69 @@
+{
+  "$id": "did.v1.Permissions.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Permissions contains a list of grants and access control rules for\n a Service.",
+  "properties": {
+    "grants": {
+      "items": {
+        "anyOf": [
+          {
+            "enum": [
+              "DID_NAMESPACE_UNSPECIFIED",
+              "DID_NAMESPACE_IPFS",
+              "DID_NAMESPACE_SONR",
+              "DID_NAMESPACE_BITCOIN",
+              "DID_NAMESPACE_ETHEREUM",
+              "DID_NAMESPACE_IBC",
+              "DID_NAMESPACE_WEBAUTHN",
+              "DID_NAMESPACE_DWN",
+              "DID_NAMESPACE_SERVICE"
+            ],
+            "title": "DID Namespace",
+            "type": "string"
+          },
+          {
+            "maximum": 2147483647,
+            "minimum": -2147483648,
+            "type": "integer"
+          }
+        ]
+      },
+      "type": "array"
+    },
+    "scopes": {
+      "items": {
+        "anyOf": [
+          {
+            "enum": [
+              "PERMISSION_SCOPE_UNSPECIFIED",
+              "PERMISSION_SCOPE_BASIC_INFO",
+              "PERMISSION_SCOPE_RECORDS_READ",
+              "PERMISSION_SCOPE_RECORDS_WRITE",
+              "PERMISSION_SCOPE_TRANSACTIONS_READ",
+              "PERMISSION_SCOPE_TRANSACTIONS_WRITE",
+              "PERMISSION_SCOPE_WALLETS_READ",
+              "PERMISSION_SCOPE_WALLETS_CREATE",
+              "PERMISSION_SCOPE_WALLETS_SUBSCRIBE",
+              "PERMISSION_SCOPE_WALLETS_UPDATE",
+              "PERMISSION_SCOPE_TRANSACTIONS_VERIFY",
+              "PERMISSION_SCOPE_TRANSACTIONS_BROADCAST",
+              "PERMISSION_SCOPE_ADMIN_USER",
+              "PERMISSION_SCOPE_ADMIN_VALIDATOR"
+            ],
+            "title": "Permission Scope",
+            "type": "string"
+          },
+          {
+            "maximum": 2147483647,
+            "minimum": -2147483648,
+            "type": "integer"
+          }
+        ]
+      },
+      "type": "array"
+    }
+  },
+  "title": "Permissions",
+  "type": "object"
+}

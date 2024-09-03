@@ -1,0 +1,60 @@
+{
+  "$id": "did.v1.Delegation.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Delegation represents IBC Account Controllers for various chains (e.g., ETH, BTC)",
+  "patternProperties": {
+    "^(account_address)$": {
+      "description": "The Account Address",
+      "type": "string"
+    },
+    "^(account_label)$": {
+      "description": "The Account label",
+      "type": "string"
+    },
+    "^(chain_id)$": {
+      "description": "The Chain ID",
+      "type": "string"
+    },
+    "^(chain_index)$": {
+      "description": "Resolved from module parameters",
+      "type": "string"
+    },
+    "^(public_key)$": {
+      "$ref": "did.v1.PubKey.jsonschema.json",
+      "description": "The delegation proof or verification method"
+    }
+  },
+  "properties": {
+    "accountAddress": {
+      "description": "The Account Address",
+      "type": "string"
+    },
+    "accountLabel": {
+      "description": "The Account label",
+      "type": "string"
+    },
+    "chainId": {
+      "description": "The Chain ID",
+      "type": "string"
+    },
+    "chainIndex": {
+      "description": "Resolved from module parameters",
+      "type": "string"
+    },
+    "controller": {
+      "description": "The Decentralized Identifier of the delegated account",
+      "type": "string"
+    },
+    "id": {
+      "description": "The unique identifier of the delegation",
+      "type": "string"
+    },
+    "publicKey": {
+      "$ref": "did.v1.PubKey.jsonschema.json",
+      "description": "The delegation proof or verification method"
+    }
+  },
+  "title": "Delegation",
+  "type": "object"
+}

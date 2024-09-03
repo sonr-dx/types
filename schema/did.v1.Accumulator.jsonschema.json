@@ -1,0 +1,14 @@
+{
+  "$id": "did.v1.Accumulator.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Accumulator defines a BLS accumulator",
+  "properties": {
+    "accumulator": {
+      "pattern": "^[A-Za-z0-9+/]*={0,2}$",
+      "type": "string"
+    }
+  },
+  "title": "Accumulator",
+  "type": "object"
+}

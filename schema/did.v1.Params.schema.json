@@ -1,0 +1,62 @@
+{
+  "$id": "did.v1.Params.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Params defines the set of module parameters.",
+  "patternProperties": {
+    "^(allowedPublicKeys)$": {
+      "description": "Whitelisted Key Types",
+      "items": {
+        "$ref": "did.v1.KeyInfo.schema.json"
+      },
+      "type": "array"
+    },
+    "^(openidConfig)$": {
+      "$ref": "did.v1.OpenIDConfig.schema.json",
+      "description": "OpenIDConfig defines the base openid configuration across all did services"
+    },
+    "^(whitelistedAssets)$": {
+      "description": "Whitelisted Assets",
+      "items": {
+        "$ref": "did.v1.AssetInfo.schema.json"
+      },
+      "type": "array"
+    },
+    "^(whitelistedChains)$": {
+      "description": "Whitelisted Blockchains",
+      "items": {
+        "$ref": "did.v1.ChainInfo.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "allowed_public_keys": {
+      "description": "Whitelisted Key Types",
+      "items": {
+        "$ref": "did.v1.KeyInfo.schema.json"
+      },
+      "type": "array"
+    },
+    "openid_config": {
+      "$ref": "did.v1.OpenIDConfig.schema.json",
+      "description": "OpenIDConfig defines the base openid configuration across all did services"
+    },
+    "whitelisted_assets": {
+      "description": "Whitelisted Assets",
+      "items": {
+        "$ref": "did.v1.AssetInfo.schema.json"
+      },
+      "type": "array"
+    },
+    "whitelisted_chains": {
+      "description": "Whitelisted Blockchains",
+      "items": {
+        "$ref": "did.v1.ChainInfo.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Params",
+  "type": "object"
+}

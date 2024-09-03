@@ -1,0 +1,16 @@
+{
+  "$id": "did.v1.ValidatorInfo.IBCChannel.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "IBCChannel defines the IBC channel info",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "port": {
+      "type": "string"
+    }
+  },
+  "title": "IBC Channel",
+  "type": "object"
+}

@@ -1,0 +1,14 @@
+{
+  "$id": "did.v1.QueryParamsResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "QueryParamsResponse is the response type for the Query/Params RPC method.",
+  "properties": {
+    "params": {
+      "$ref": "did.v1.Params.jsonschema.json",
+      "description": "params defines the parameters of the module."
+    }
+  },
+  "title": "Query Params Response",
+  "type": "object"
+}

@@ -1,0 +1,22 @@
+{
+  "$id": "did.v1.Profile.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Profile defines an associated public identity for a did subject",
+  "properties": {
+    "controller": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "metadata": {
+      "$ref": "did.v1.Metadata.jsonschema.json"
+    },
+    "subject": {
+      "type": "string"
+    }
+  },
+  "title": "Profile",
+  "type": "object"
+}

@@ -1,0 +1,27 @@
+{
+  "$id": "did.v1.MsgProveWitness.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "MsgProveWitness is the message type for the ProveWitness RPC.",
+  "properties": {
+    "authority": {
+      "description": "authority is the address of the governance account.",
+      "type": "string"
+    },
+    "property": {
+      "description": "property is key to prove.",
+      "type": "string"
+    },
+    "token": {
+      "$ref": "did.v1.Token.schema.json",
+      "description": "token is the macron token to authenticate the operation."
+    },
+    "witness": {
+      "description": "Witness Value is the bytes of the witness.",
+      "pattern": "^[A-Za-z0-9+/]*={0,2}$",
+      "type": "string"
+    }
+  },
+  "title": "Msg Prove Witness",
+  "type": "object"
+}

@@ -1,0 +1,28 @@
+{
+  "$id": "did.v1.Service.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Service defines a Decentralized Service on the Sonr Blockchain",
+  "properties": {
+    "controller": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "metadata": {
+      "$ref": "did.v1.Metadata.jsonschema.json"
+    },
+    "openid": {
+      "$ref": "did.v1.OpenIDConfig.jsonschema.json"
+    },
+    "origin": {
+      "type": "string"
+    },
+    "permissions": {
+      "$ref": "did.v1.Permissions.jsonschema.json"
+    }
+  },
+  "title": "Service",
+  "type": "object"
+}

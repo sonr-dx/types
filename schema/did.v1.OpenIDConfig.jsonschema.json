@@ -1,0 +1,105 @@
+{
+  "$id": "did.v1.OpenIDConfig.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "OpenIDConfig defines the base openid configuration across all did services",
+  "patternProperties": {
+    "^(acr_values_supported)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "^(authorization_endpoint)$": {
+      "type": "string"
+    },
+    "^(grant_types_supported)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "^(response_modes_supported)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "^(response_types_supported)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "^(scopes_supported)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "^(subject_types_supported)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "^(token_endpoint)$": {
+      "type": "string"
+    },
+    "^(userinfo_endpoint)$": {
+      "type": "string"
+    }
+  },
+  "properties": {
+    "acrValuesSupported": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "authorizationEndpoint": {
+      "type": "string"
+    },
+    "grantTypesSupported": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "responseModesSupported": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "responseTypesSupported": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "scopesSupported": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "subjectTypesSupported": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "tokenEndpoint": {
+      "type": "string"
+    },
+    "userinfoEndpoint": {
+      "type": "string"
+    }
+  },
+  "title": "OpenID Config",
+  "type": "object"
+}

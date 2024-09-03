@@ -1,0 +1,11 @@
+version: v2
+inputs:
+  - module: buf.build/onsonr/hway
+plugins:
+  - remote: buf.build/bufbuild/es:v2.0.0
+    opt: target=js
+    out: src/gen
+  - remote: buf.build/bufbuild/protoschema-jsonschema
+    out: schema
+  - remote: buf.build/community/pseudomuto-doc:v1.5.1
+    out: docs

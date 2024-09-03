@@ -1,0 +1,36 @@
+{
+  "$id": "did.v1.Metadata.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Metadata defines additional information provided to a did",
+  "patternProperties": {
+    "^(originUri)$": {
+      "type": "string"
+    }
+  },
+  "properties": {
+    "origin_uri": {
+      "type": "string"
+    },
+    "private": {
+      "additionalProperties": {
+        "$ref": "did.v1.Property.schema.json"
+      },
+      "propertyNames": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "public": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "propertyNames": {
+        "type": "string"
+      },
+      "type": "object"
+    }
+  },
+  "title": "Metadata",
+  "type": "object"
+}

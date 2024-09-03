@@ -1,0 +1,16 @@
+{
+  "$id": "did.v1.MsgAuthorizeResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "MsgAuthorizeResponse is the response type for the Authorize RPC.",
+  "properties": {
+    "success": {
+      "type": "boolean"
+    },
+    "token": {
+      "$ref": "did.v1.Token.jsonschema.json"
+    }
+  },
+  "title": "Msg Authorize Response",
+  "type": "object"
+}

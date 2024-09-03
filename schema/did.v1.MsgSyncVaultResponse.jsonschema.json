@@ -1,0 +1,13 @@
+{
+  "$id": "did.v1.MsgSyncVaultResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "MsgSyncVaultResponse is the response type for the SyncVault RPC.",
+  "properties": {
+    "success": {
+      "type": "boolean"
+    }
+  },
+  "title": "Msg Sync Vault Response",
+  "type": "object"
+}

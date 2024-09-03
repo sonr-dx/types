@@ -1,0 +1,118 @@
+{
+  "$id": "did.v1.KeyInfo.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "KeyInfo defines information for accepted PubKey types",
+  "properties": {
+    "algorithm": {
+      "anyOf": [
+        {
+          "enum": [
+            "KEY_ALGORITHM_UNSPECIFIED",
+            "KEY_ALGORITHM_ES256",
+            "KEY_ALGORITHM_ES384",
+            "KEY_ALGORITHM_ES512",
+            "KEY_ALGORITHM_EDDSA",
+            "KEY_ALGORITHM_ES256K",
+            "KEY_ALGORITHM_BLS12377",
+            "KEY_ALGORITHM_KECCAK256"
+          ],
+          "title": "Key Algorithm",
+          "type": "string"
+        },
+        {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        }
+      ]
+    },
+    "curve": {
+      "anyOf": [
+        {
+          "enum": [
+            "KEY_CURVE_UNSPECIFIED",
+            "KEY_CURVE_P256",
+            "KEY_CURVE_P384",
+            "KEY_CURVE_P521",
+            "KEY_CURVE_X25519",
+            "KEY_CURVE_X448",
+            "KEY_CURVE_ED25519",
+            "KEY_CURVE_ED448",
+            "KEY_CURVE_SECP256K1"
+          ],
+          "title": "Key Curve",
+          "type": "string"
+        },
+        {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        }
+      ]
+    },
+    "encoding": {
+      "anyOf": [
+        {
+          "enum": [
+            "KEY_ENCODING_UNSPECIFIED",
+            "KEY_ENCODING_RAW",
+            "KEY_ENCODING_HEX",
+            "KEY_ENCODING_MULTIBASE",
+            "KEY_ENCODING_JWK"
+          ],
+          "title": "Key Encoding",
+          "type": "string"
+        },
+        {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        }
+      ]
+    },
+    "role": {
+      "anyOf": [
+        {
+          "enum": [
+            "KEY_ROLE_UNSPECIFIED",
+            "KEY_ROLE_AUTHENTICATION",
+            "KEY_ROLE_ASSERTION",
+            "KEY_ROLE_DELEGATION",
+            "KEY_ROLE_INVOCATION"
+          ],
+          "title": "Key Role",
+          "type": "string"
+        },
+        {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        }
+      ]
+    },
+    "type": {
+      "anyOf": [
+        {
+          "enum": [
+            "KEY_TYPE_UNSPECIFIED",
+            "KEY_TYPE_OCTET",
+            "KEY_TYPE_ELLIPTIC",
+            "KEY_TYPE_RSA",
+            "KEY_TYPE_SYMMETRIC",
+            "KEY_TYPE_HMAC"
+          ],
+          "title": "Key Type",
+          "type": "string"
+        },
+        {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        }
+      ]
+    }
+  },
+  "title": "Key Info",
+  "type": "object"
+}

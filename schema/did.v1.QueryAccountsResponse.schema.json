@@ -1,0 +1,13 @@
+{
+  "$id": "did.v1.QueryAccountsResponse.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "QueryAccountsResponse is the response type for the Query/Exists RPC method.",
+  "properties": {
+    "exists": {
+      "type": "boolean"
+    }
+  },
+  "title": "Query Accounts Response",
+  "type": "object"
+}

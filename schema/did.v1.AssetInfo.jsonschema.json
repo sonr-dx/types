@@ -1,0 +1,96 @@
+{
+  "$id": "did.v1.AssetInfo.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "AssetInfo defines the asset info",
+  "patternProperties": {
+    "^(asset_type)$": {
+      "anyOf": [
+        {
+          "enum": [
+            "ASSET_TYPE_UNSPECIFIED",
+            "ASSET_TYPE_NATIVE",
+            "ASSET_TYPE_WRAPPED",
+            "ASSET_TYPE_STAKING",
+            "ASSET_TYPE_POOL",
+            "ASSET_TYPE_IBC",
+            "ASSET_TYPE_CW20"
+          ],
+          "title": "Asset Type",
+          "type": "string"
+        },
+        {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        }
+      ],
+      "description": "The coin name"
+    },
+    "^(icon_url)$": {
+      "description": "The icon url",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "assetType": {
+      "anyOf": [
+        {
+          "enum": [
+            "ASSET_TYPE_UNSPECIFIED",
+            "ASSET_TYPE_NATIVE",
+            "ASSET_TYPE_WRAPPED",
+            "ASSET_TYPE_STAKING",
+            "ASSET_TYPE_POOL",
+            "ASSET_TYPE_IBC",
+            "ASSET_TYPE_CW20"
+          ],
+          "title": "Asset Type",
+          "type": "string"
+        },
+        {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        }
+      ],
+      "description": "The coin name"
+    },
+    "hrp": {
+      "description": "The hrp for bech32 address",
+      "type": "string"
+    },
+    "iconUrl": {
+      "description": "The icon url",
+      "type": "string"
+    },
+    "index": {
+      "anyOf": [
+        {
+          "maximum": 9223372036854776000,
+          "minimum": -9223372036854776000,
+          "type": "integer"
+        },
+        {
+          "pattern": "^[0-9]+$",
+          "type": "string"
+        }
+      ],
+      "description": "The coin type index for bip44 path"
+    },
+    "method": {
+      "description": "The Method of the did namespace",
+      "type": "string"
+    },
+    "name": {
+      "description": "The name of the asset",
+      "type": "string"
+    },
+    "symbol": {
+      "description": "The coin symbol",
+      "type": "string"
+    }
+  },
+  "title": "Asset Info",
+  "type": "object"
+}

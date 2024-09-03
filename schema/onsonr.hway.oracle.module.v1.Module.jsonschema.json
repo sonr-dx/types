@@ -1,0 +1,9 @@
+{
+  "$id": "onsonr.hway.oracle.module.v1.Module.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Module is the app config object of the module.\n Learn more: https://docs.cosmos.network/main/building-modules/depinject",
+  "properties": {},
+  "title": "Module",
+  "type": "object"
+}

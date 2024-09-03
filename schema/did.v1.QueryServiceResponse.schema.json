@@ -1,0 +1,13 @@
+{
+  "$id": "did.v1.QueryServiceResponse.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "QueryLoginOptionsResponse is the response type for the Query/LoginOptions RPC method.",
+  "properties": {
+    "service": {
+      "$ref": "did.v1.Service.schema.json"
+    }
+  },
+  "title": "Query Service Response",
+  "type": "object"
+}

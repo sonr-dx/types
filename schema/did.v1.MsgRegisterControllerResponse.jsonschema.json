@@ -1,0 +1,28 @@
+{
+  "$id": "did.v1.MsgRegisterControllerResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "MsgRegisterControllerResponse is the response type for the InitializeController RPC.",
+  "properties": {
+    "accounts": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "Accounts are a Address Map and Supported coin Denoms for the controller",
+      "propertyNames": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "controller": {
+      "description": "Controller is the address of the initialized controller.",
+      "type": "string"
+    },
+    "success": {
+      "description": "Success returns true if the specified cid is valid and not already encrypted.",
+      "type": "boolean"
+    }
+  },
+  "title": "Msg Register Controller Response",
+  "type": "object"
+}

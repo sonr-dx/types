@@ -1,0 +1,75 @@
+{
+  "$id": "did.v1.Document.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Document defines a DID document",
+  "patternProperties": {
+    "^(assertion_method)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "^(capability_delegation)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "^(capability_invocation)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "^(verification_methods)$": {
+      "items": {
+        "$ref": "did.v1.VerificationMethod.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "assertionMethod": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "authentication": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "capabilityDelegation": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "capabilityInvocation": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "id": {
+      "type": "string"
+    },
+    "service": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "verificationMethods": {
+      "items": {
+        "$ref": "did.v1.VerificationMethod.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Document",
+  "type": "object"
+}

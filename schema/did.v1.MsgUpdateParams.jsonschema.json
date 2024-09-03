@@ -1,0 +1,22 @@
+{
+  "$id": "did.v1.MsgUpdateParams.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "MsgUpdateParams is the Msg/UpdateParams request type.\n\n Since: cosmos-sdk 0.47",
+  "properties": {
+    "authority": {
+      "description": "authority is the address of the governance account.",
+      "type": "string"
+    },
+    "params": {
+      "$ref": "did.v1.Params.jsonschema.json",
+      "description": "params defines the parameters to update."
+    },
+    "token": {
+      "$ref": "did.v1.Token.jsonschema.json",
+      "description": "token is the macron token to authenticate the operation."
+    }
+  },
+  "title": "Msg Update Params",
+  "type": "object"
+}

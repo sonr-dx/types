@@ -1,0 +1,14 @@
+{
+  "$id": "did.v1.MsgAllocateVaultResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "MsgAllocateVaultResponse is the response type for the AllocateVault RPC.",
+  "properties": {
+    "cid": {
+      "description": "CID is the content identifier of the vault.",
+      "type": "string"
+    }
+  },
+  "title": "Msg Allocate Vault Response",
+  "type": "object"
+}

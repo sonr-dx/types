@@ -1,0 +1,21 @@
+{
+  "$id": "did.v1.ValidatorInfo.Endpoint.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Endpoint defines an endpoint",
+  "patternProperties": {
+    "^(isPrimary)$": {
+      "type": "boolean"
+    }
+  },
+  "properties": {
+    "is_primary": {
+      "type": "boolean"
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "title": "Endpoint",
+  "type": "object"
+}

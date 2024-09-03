@@ -1,0 +1,60 @@
+{
+  "$id": "did.v1.MsgRegisterService.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "MsgRegisterService is the message type for the RegisterService RPC.",
+  "patternProperties": {
+    "^(origin_uri)$": {
+      "description": "origin is the origin of the request in wildcard form.",
+      "type": "string"
+    },
+    "^(service_endpoints)$": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "service_endpoints is the endpoints of the service",
+      "propertyNames": {
+        "type": "string"
+      },
+      "type": "object"
+    }
+  },
+  "properties": {
+    "controller": {
+      "description": "authority is the address of the governance account.",
+      "type": "string"
+    },
+    "description": {
+      "description": "Description is the description of the service",
+      "type": "string"
+    },
+    "metadata": {
+      "$ref": "did.v1.Metadata.jsonschema.json",
+      "description": "Metadata is optional additional information about the service"
+    },
+    "originUri": {
+      "description": "origin is the origin of the request in wildcard form.",
+      "type": "string"
+    },
+    "scopes": {
+      "$ref": "did.v1.Permissions.jsonschema.json",
+      "description": "Permissions is the scope of the service."
+    },
+    "serviceEndpoints": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "service_endpoints is the endpoints of the service",
+      "propertyNames": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "token": {
+      "$ref": "did.v1.Token.jsonschema.json",
+      "description": "token is the macron token to authenticate the operation."
+    }
+  },
+  "title": "Msg Register Service",
+  "type": "object"
+}

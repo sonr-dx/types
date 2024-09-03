@@ -1,0 +1,43 @@
+{
+  "$id": "did.v1.Controller.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Controller represents a Sonr DWN Vault",
+  "patternProperties": {
+    "^(publicKey)$": {
+      "$ref": "did.v1.PubKey.schema.json",
+      "description": "PubKey is the verification method"
+    },
+    "^(vaultCid)$": {
+      "description": "The vault address or identifier",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "address": {
+      "description": "The DID of the controller",
+      "type": "string"
+    },
+    "aliases": {
+      "description": "Aliases of the controller",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "id": {
+      "description": "The unique identifier of the controller",
+      "type": "string"
+    },
+    "public_key": {
+      "$ref": "did.v1.PubKey.schema.json",
+      "description": "PubKey is the verification method"
+    },
+    "vault_cid": {
+      "description": "The vault address or identifier",
+      "type": "string"
+    }
+  },
+  "title": "Controller",
+  "type": "object"
+}

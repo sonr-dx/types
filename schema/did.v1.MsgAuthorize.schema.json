@@ -1,0 +1,30 @@
+{
+  "$id": "did.v1.MsgAuthorize.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "MsgAuthorize is the message type for the Authorize RPC.",
+  "properties": {
+    "address": {
+      "description": "Address is the address to authenticate.",
+      "type": "string"
+    },
+    "authority": {
+      "description": "authority is the address of the governance account.",
+      "type": "string"
+    },
+    "controller": {
+      "description": "Controller is the address of the controller to authenticate.",
+      "type": "string"
+    },
+    "origin": {
+      "description": "Origin is the origin of the request in wildcard form.",
+      "type": "string"
+    },
+    "token": {
+      "$ref": "did.v1.Token.schema.json",
+      "description": "token is the macron token to authenticate the operation."
+    }
+  },
+  "title": "Msg Authorize",
+  "type": "object"
+}

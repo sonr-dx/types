@@ -1,0 +1,33 @@
+{
+  "$id": "did.v1.ChainInfo.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "ChainInfo defines the chain info",
+  "patternProperties": {
+    "^(chainId)$": {
+      "type": "string"
+    }
+  },
+  "properties": {
+    "chain_id": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "symbol": {
+      "type": "string"
+    },
+    "validators": {
+      "items": {
+        "$ref": "did.v1.ValidatorInfo.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Chain Info",
+  "type": "object"
+}

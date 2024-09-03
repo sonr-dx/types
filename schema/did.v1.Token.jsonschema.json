@@ -1,0 +1,20 @@
+{
+  "$id": "did.v1.Token.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Token defines a macron token",
+  "properties": {
+    "controller": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "macron": {
+      "pattern": "^[A-Za-z0-9+/]*={0,2}$",
+      "type": "string"
+    }
+  },
+  "title": "Token",
+  "type": "object"
+}

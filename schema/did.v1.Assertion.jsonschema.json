@@ -1,0 +1,58 @@
+{
+  "$id": "did.v1.Assertion.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Assertion represents strongly created credentials (e.g., Passkeys, SSH, GPG, Native Secure Enclaave)",
+  "patternProperties": {
+    "^(credential_id)$": {
+      "description": "The value of the linked identifier",
+      "pattern": "^[A-Za-z0-9+/]*={0,2}$",
+      "type": "string"
+    },
+    "^(credential_label)$": {
+      "description": "The display label of the attestation",
+      "type": "string"
+    },
+    "^(public_key)$": {
+      "$ref": "did.v1.PubKey.jsonschema.json",
+      "description": "Key type (e.g., \"passkey\", \"ssh\", \"gpg\", \"native-secure-enclave\")"
+    }
+  },
+  "properties": {
+    "controller": {
+      "description": "The controller of the attestation",
+      "type": "string"
+    },
+    "credentialId": {
+      "description": "The value of the linked identifier",
+      "pattern": "^[A-Za-z0-9+/]*={0,2}$",
+      "type": "string"
+    },
+    "credentialLabel": {
+      "description": "The display label of the attestation",
+      "type": "string"
+    },
+    "id": {
+      "description": "The unique identifier of the attestation",
+      "type": "string"
+    },
+    "metadata": {
+      "$ref": "did.v1.Metadata.jsonschema.json",
+      "description": "Metadata is optional additional information about the assertion"
+    },
+    "origin": {
+      "description": "The origin of the attestation",
+      "type": "string"
+    },
+    "publicKey": {
+      "$ref": "did.v1.PubKey.jsonschema.json",
+      "description": "Key type (e.g., \"passkey\", \"ssh\", \"gpg\", \"native-secure-enclave\")"
+    },
+    "subject": {
+      "description": "The subject of the attestation",
+      "type": "string"
+    }
+  },
+  "title": "Assertion",
+  "type": "object"
+}

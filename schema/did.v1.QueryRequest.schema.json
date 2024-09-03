@@ -1,0 +1,25 @@
+{
+  "$id": "did.v1.QueryRequest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Queryequest is the request type for the Query/Params RPC method.",
+  "properties": {
+    "credentials": {
+      "items": {
+        "$ref": "did.v1.Credential.schema.json"
+      },
+      "type": "array"
+    },
+    "did": {
+      "type": "string"
+    },
+    "origin": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    }
+  },
+  "title": "Query Request",
+  "type": "object"
+}

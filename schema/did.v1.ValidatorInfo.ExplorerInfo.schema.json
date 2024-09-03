@@ -1,0 +1,16 @@
+{
+  "$id": "did.v1.ValidatorInfo.ExplorerInfo.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "ExplorerInfo defines the explorer info",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "title": "Explorer Info",
+  "type": "object"
+}

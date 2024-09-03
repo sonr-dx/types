@@ -1,0 +1,54 @@
+{
+  "$id": "did.v1.ValidatorInfo.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "ValidatorInfo defines information for accepted Validator nodes",
+  "patternProperties": {
+    "^(feeInfo)$": {
+      "$ref": "did.v1.ValidatorInfo.FeeInfo.schema.json"
+    },
+    "^(grpcEndpoints)$": {
+      "items": {
+        "$ref": "did.v1.ValidatorInfo.Endpoint.schema.json"
+      },
+      "type": "array"
+    },
+    "^(ibcChannel)$": {
+      "$ref": "did.v1.ValidatorInfo.IBCChannel.schema.json"
+    },
+    "^(restEndpoints)$": {
+      "items": {
+        "$ref": "did.v1.ValidatorInfo.Endpoint.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "explorer": {
+      "$ref": "did.v1.ValidatorInfo.ExplorerInfo.schema.json"
+    },
+    "fee_info": {
+      "$ref": "did.v1.ValidatorInfo.FeeInfo.schema.json"
+    },
+    "grpc_endpoints": {
+      "items": {
+        "$ref": "did.v1.ValidatorInfo.Endpoint.schema.json"
+      },
+      "type": "array"
+    },
+    "ibc_channel": {
+      "$ref": "did.v1.ValidatorInfo.IBCChannel.schema.json"
+    },
+    "moniker": {
+      "type": "string"
+    },
+    "rest_endpoints": {
+      "items": {
+        "$ref": "did.v1.ValidatorInfo.Endpoint.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Validator Info",
+  "type": "object"
+}

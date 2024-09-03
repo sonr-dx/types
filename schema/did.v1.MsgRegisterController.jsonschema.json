@@ -1,0 +1,33 @@
+{
+  "$id": "did.v1.MsgRegisterController.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "MsgRegisterController is the message type for the InitializeController RPC.",
+  "properties": {
+    "authentication": {
+      "description": "Credential is the list of keyshares to initialize the controller with.",
+      "items": {
+        "$ref": "did.v1.Credential.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "authority": {
+      "description": "authority is the address of the governance account.",
+      "type": "string"
+    },
+    "cid": {
+      "description": "Assertions is the list of assertions to initialize the controller with.",
+      "type": "string"
+    },
+    "origin": {
+      "description": "Origin is the origin of the request in wildcard form.",
+      "type": "string"
+    },
+    "token": {
+      "$ref": "did.v1.Token.jsonschema.json",
+      "description": "token is the macron token to authenticate the operation."
+    }
+  },
+  "title": "Msg Register Controller",
+  "type": "object"
+}

@@ -1,0 +1,18 @@
+{
+  "$id": "did.v1.MsgSyncVault.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "MsgSyncVault is the message type for the SyncVault RPC.",
+  "properties": {
+    "controller": {
+      "description": "controller is the address of the controller to sync.",
+      "type": "string"
+    },
+    "token": {
+      "$ref": "did.v1.Token.schema.json",
+      "description": "Token is the public token to authenticate the operation."
+    }
+  },
+  "title": "Msg Sync Vault",
+  "type": "object"
+}

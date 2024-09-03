@@ -1,0 +1,14 @@
+{
+  "$id": "did.v1.Witness.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Witness defines a BLS witness",
+  "properties": {
+    "witness": {
+      "pattern": "^[A-Za-z0-9+/]*={0,2}$",
+      "type": "string"
+    }
+  },
+  "title": "Witness",
+  "type": "object"
+}

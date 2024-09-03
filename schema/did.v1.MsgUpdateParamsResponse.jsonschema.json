@@ -1,0 +1,9 @@
+{
+  "$id": "did.v1.MsgUpdateParamsResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "MsgUpdateParamsResponse defines the response structure for executing a\n MsgUpdateParams message.\n\n Since: cosmos-sdk 0.47",
+  "properties": {},
+  "title": "Msg Update Params Response",
+  "type": "object"
+}

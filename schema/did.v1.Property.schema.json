@@ -1,0 +1,18 @@
+{
+  "$id": "did.v1.Property.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Property defines a Zero-Knowledge accumulator which can be used to\n anonymously prove a given value to a DID subject",
+  "properties": {
+    "accumulator": {
+      "pattern": "^[A-Za-z0-9+/]*={0,2}$",
+      "type": "string"
+    },
+    "key": {
+      "pattern": "^[A-Za-z0-9+/]*={0,2}$",
+      "type": "string"
+    }
+  },
+  "title": "Property",
+  "type": "object"
+}

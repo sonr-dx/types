@@ -1,0 +1,9 @@
+{
+  "$id": "oracle.v1.GenesisState.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "GenesisState defines the middlewares genesis state.",
+  "properties": {},
+  "title": "Genesis State",
+  "type": "object"
+}

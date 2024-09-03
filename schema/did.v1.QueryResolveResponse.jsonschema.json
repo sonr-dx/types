@@ -1,0 +1,14 @@
+{
+  "$id": "did.v1.QueryResolveResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "QueryResolveResponse is the response type for the Query/Resolve RPC method.",
+  "properties": {
+    "document": {
+      "$ref": "did.v1.Document.jsonschema.json",
+      "description": "document is the DID document"
+    }
+  },
+  "title": "Query Resolve Response",
+  "type": "object"
+}
